@@ -20,6 +20,12 @@ The project transforms raw financial transaction data into a structured analytic
 
 *Payments and revenue analysis covering payment failures, transaction types, payment channels, fee revenue, and month-over-month performance.*
 
+### Customer & Risk Analysis
+
+![Customer & Risk Analysis](Dashboard_Screenshots/page4.png)
+
+*Customer and risk analysis highlighting high-risk payment exposure, chargebacks, merchant-category risk, and customer plan performance.*
+
 ## Business Objective
 
 The objective of this project is to analyse fintech transaction data and identify actionable insights across financial performance, payment operations, reconciliation, customer risk, and chargebacks.
