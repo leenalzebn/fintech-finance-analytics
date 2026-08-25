@@ -8,6 +8,18 @@ The project transforms raw financial transaction data into a structured analytic
 ![Executive Overview](Dashboard_Screenshots/page1.png)
 *Executive Overview — interactive Power BI dashboard showing payment volume, fee revenue, settlement performance, transaction activity, and geographic trends.*
 
+### Reconciliation & Data Quality
+
+![Reconciliation & Data Quality](Dashboard_Screenshots/page2.png)
+
+*Reconciliation monitoring dashboard highlighting settlement exceptions, financial variance, failed transactions, geographic patterns, and monthly trends.*
+
+### Payments & Revenue
+
+![Payments & Revenue](Dashboard_Screenshots/page3.png)
+
+*Payments and revenue analysis covering payment failures, transaction types, payment channels, fee revenue, and month-over-month performance.*
+
 ## Business Objective
 
 The objective of this project is to analyse fintech transaction data and identify actionable insights across financial performance, payment operations, reconciliation, customer risk, and chargebacks.
