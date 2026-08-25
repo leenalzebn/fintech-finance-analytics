@@ -4,6 +4,8 @@ An end-to-end fintech data analytics project analysing payment performance, fee 
 
 The project transforms raw financial transaction data into a structured analytical model and an interactive four-page Power BI dashboard designed to support finance, operations, and risk decision-making.
 
+## Dashboard Preview
+
 ## Business Objective
 
 The objective of this project is to analyse fintech transaction data and identify actionable insights across financial performance, payment operations, reconciliation, customer risk, and chargebacks.
