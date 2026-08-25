@@ -6,6 +6,7 @@ The project transforms raw financial transaction data into a structured analytic
 
 ## Dashboard Preview
 ![Executive Overview](Dashboard_Screenshots/page1.png)
+*Executive Overview — interactive Power BI dashboard showing payment volume, fee revenue, settlement performance, transaction activity, and geographic trends.*
 
 ## Business Objective
 
