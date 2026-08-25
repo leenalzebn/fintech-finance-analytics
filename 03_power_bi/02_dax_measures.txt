@@ -1,0 +1,47 @@
+Date = CALENDAR(DATE(2024,1,1),DATE(2026,6,30))
+
+Payment Volume EUR =
+CALCULATE(SUM(transactions[amount_eur]),transactions[status]="SETTLED")
+
+Fee Revenue EUR =
+CALCULATE(SUM(transactions[fee_eur]),transactions[status]="SETTLED")
+
+Transaction Count = COUNTROWS(transactions)
+
+Settled Transactions =
+CALCULATE([Transaction Count],transactions[status]="SETTLED")
+
+Failed Transactions =
+CALCULATE([Transaction Count],transactions[status]="FAILED")
+
+Settlement Rate % = DIVIDE([Settled Transactions],[Transaction Count])
+
+Failure Rate % = DIVIDE([Failed Transactions],[Transaction Count])
+
+Average Transaction EUR = DIVIDE([Payment Volume EUR],[Settled Transactions])
+
+Reconciliation Variance EUR =
+SUMX(FILTER(transactions,transactions[status]="SETTLED"),
+transactions[actual_settlement_eur]-transactions[expected_settlement_eur])
+
+Reconciliation Exceptions =
+COUNTROWS(FILTER(transactions,transactions[status]="SETTLED" &&
+ABS(transactions[actual_settlement_eur]-transactions[expected_settlement_eur])>.01))
+
+Chargeback Count = COUNTROWS(chargebacks)
+Chargeback Amount EUR = SUM(chargebacks[chargeback_amount_eur])
+
+Chargeback Rate % =
+DIVIDE([Chargeback Count],CALCULATE([Settled Transactions],transactions[transaction_type]="card_payment"))
+
+Previous Month Volume =
+CALCULATE([Payment Volume EUR],DATEADD('Date'[Date],-1,MONTH))
+
+MoM Volume Growth % =
+DIVIDE([Payment Volume EUR]-[Previous Month Volume],[Previous Month Volume])
+
+High Risk Volume EUR =
+CALCULATE([Payment Volume EUR],customers[risk_rating]="HIGH")
+
+High Risk Volume Share % =
+DIVIDE([High Risk Volume EUR],[Payment Volume EUR])
