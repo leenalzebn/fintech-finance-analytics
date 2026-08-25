@@ -154,3 +154,13 @@ Based on the analysis, the following actions are recommended:
 This project demonstrates an end-to-end analytics workflow, from relational database design and SQL analysis through to financial KPI development and interactive Power BI reporting.
 
 The final solution provides a consolidated view of payment performance, revenue, reconciliation, operational exceptions, customer risk, and chargeback exposure to support data-driven decision-making.
+
+## Repository Structure
+
+```text
+fintech-finance-analytics/
+├── 02_sql/                # PostgreSQL and SQL analysis
+├── 03_power_bi/           # Power BI dashboard and supporting files
+├── 04_documentation/      # Project summary and documentation
+├── Dashboard_Screenshots/ # Dashboard page screenshots
+└── README.md              # Main project documentation
