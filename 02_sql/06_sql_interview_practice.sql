@@ -1,0 +1,11 @@
+SET search_path TO revolut_finance;
+-- Q1 Calculate monthly settled volume and month-over-month growth.
+-- Q2 Find top 5 countries by fee revenue and failure rate.
+-- Q3 Identify reconciliation exceptions above EUR 1.
+-- Q4 Rank merchant categories by chargeback rate.
+-- Q5 Find customers in top 1% of settled volume.
+-- Q6 For each country calculate share of volume from HIGH-risk customers.
+-- Q7 Find most common failure reason for each channel.
+-- Q8 Build a 7-day rolling average of settled payment volume.
+-- Q9 Find accounts with no transactions in the last 90 days of the dataset.
+-- Q10 Explain how you would productionise one report as an ETL pipeline.
